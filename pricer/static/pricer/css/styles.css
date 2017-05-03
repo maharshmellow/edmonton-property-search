@@ -18,9 +18,32 @@ body {
 }
 
 #maintitle{
-    font-family: "BG-Bold";
+    font-family: "BG";
+    font-weight: 700;
     font-size: 20px;
     padding-top: 10px;
     color: #C3C3FE;
     letter-spacing: -0.16px;
+}
+
+#addressBar{
+    font-family: "BG";
+    font-weight: 100;
+    text-align: center;
+    font-size: 5vw;
+    width: 100%;
+    height: 250px;
+
+
+}
+
+input:focus {
+    outline: none;
+}
+input[type="text"] {
+    /*background-color: red;*/
+    border: transparent;
+    background-image: linear-gradient(197deg, #FFECF5 0%, #A5BBFF 100%);
+    box-shadow: 0 2px 50px 27px rgba(215,215,215,0.50), inset 0 1px 53px 2px rgba(143,143,143,0.50);
+
 }
