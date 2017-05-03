@@ -1,0 +1,17 @@
+html,
+body {
+  height:100%;
+  background-image: linear-gradient(232deg, #FFECF5 0%, #A5BBFF 100%);
+}
+
+
+#backplate{
+    position: relative;
+    margin: auto;
+    width: 94vw;
+    height: 94vh;
+    top: 3vh;
+    background: #FFFFFF;
+    box-shadow: -15px 46px 56px 15px rgba(0,0,0,0.50);
+    border-radius: 4px;
+}
