@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="{% static 'pricer/css/bootstrap.min.css' %}" type = "text/css"/>
 	<link rel="stylesheet" href="{% static 'pricer/css/fonts.css' %}" type = "text/css"/>
 	<link rel="stylesheet" href="{% static 'pricer/css/styles.css' %}" type = "text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 
 </head>
@@ -23,11 +24,7 @@
 		</div>
 
 		<div class="row">
-
-
-				<h1 id="addressBar"><input id="addressBarField" type="text" value="Enter Address" onfocus="if(this.value == 'Enter Address') {this.value=''}" onblur="if(this.value == ''){this.value ='Enter Address'}"></h1>
-
-
+			<h1 id="addressBar"><input id="addressBarField" type="text" value="Enter Address" onfocus="if(this.value == 'Enter Address') {this.value=''}" onblur="if(this.value == ''){this.value ='Enter Address'}"></h1>
 		</div>
 
 
@@ -37,5 +34,8 @@
 	</div>
 
 </body>
+<script>
+	$('#backplate').height($(window).height()-100);
+</script>
 
 </html>
