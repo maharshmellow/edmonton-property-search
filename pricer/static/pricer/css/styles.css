@@ -2,6 +2,7 @@ html,
 body {
   height:100%;
   background-image: linear-gradient(232deg, #FFECF5 0%, #A5BBFF 100%);
+  overflow-y: hidden;
 }
 
 
