@@ -16,3 +16,7 @@ body {
     box-shadow: -15px 46px 56px 15px rgba(0,0,0,0.50);
     border-radius: 4px;
 }
+
+#maintitle{
+    font-family: "BG-Bold"
+}
