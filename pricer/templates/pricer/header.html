@@ -24,7 +24,10 @@
 		</div>
 
 		<div class="row">
+			<div class="col-lg-2 col-sm-1"></div>
+			<div class="col-lg-8 col-sm-10 center-block text-center">
 			<h1 id="addressBar"><input id="addressBarField" type="text" value="Enter Address" onfocus="if(this.value == 'Enter Address') {this.value=''}" onblur="if(this.value == ''){this.value ='Enter Address'}"></h1>
+			<div class="col-lg-2 col-sm-1"></div>
 		</div>
 
 
@@ -36,7 +39,6 @@
 </body>
 <script>
 	if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-		console.log(1);
 		$('#backplate').height($(window).height()-10);
 	}
 	else{
