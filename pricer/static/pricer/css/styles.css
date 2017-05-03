@@ -18,5 +18,9 @@ body {
 }
 
 #maintitle{
-    font-family: "BG-Bold"
+    font-family: "BG-Bold";
+    font-size: 20px;
+    padding-top: 10px;
+    color: #C3C3FE;
+    letter-spacing: -0.16px;
 }
