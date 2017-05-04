@@ -62,7 +62,22 @@ input[type="text"] {
     /*padding-left: 10vw;*/
     font-size: 3em;
 }
+.infoBoxTitle{
+    font-family: "BG";
+    font-weight: 700;
+    font-style: italic;
+}
+.infoBoxValue{
+    font-family: "BG";
+    font-weight: 300;
 
+}
+#priceValue{
+    font-family: "BG";
+    font-weight: 700;
+    font-size: 5em;
+    
+}
 
 @media only screen and (max-width: 500px) {
     #backplate{
