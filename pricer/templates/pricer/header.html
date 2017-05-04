@@ -27,7 +27,7 @@
 			<div class="col-lg-2"></div>
 			<div class="col-lg-8 col-sm-12 center-block text-center">
 				<h1 id="addressBar">
-					<input id="addressBarField" type="text" value="Enter Address" onfocus="if(this.value == 'Enter Address') {this.value=''}" onblur="if(this.value == ''){this.value ='Enter Address'}">
+					<input id="addressBarField" type="text" value='{{addressBarField}}' onfocus="if(this.value == 'Enter Address') {this.value=''}" onblur="if(this.value == ''){this.value ='Enter Address'}">
 					</input>
 				</h1>
 			</div>
@@ -37,25 +37,19 @@
 		<div class="row">
 			<div class="col-lg-3 col-sm-2"></div>
 			<div id="infoBox" class="col-lg-6 col-sm-8">
-				<span class="infoBoxTitle">Address:</span><span class="infoBoxValue"> Value</span><br>
-				<span class="infoBoxTitle">Garage:</span><span class="infoBoxValue"> Value</span><br>
-				<span class="infoBoxTitle">Type:</span><span class="infoBoxValue"> Value</span><br>
-				<span class="infoBoxTitle">Longitude:</span><span class="infoBoxValue"> Value</span><br>
-				<span class="infoBoxTitle">Latitude:</span><span class="infoBoxValue"> Value</span><br>
+				<span class="infoBoxTitle">Address:</span><span class="infoBoxValue"> {{address}}</span><br>
+				<span class="infoBoxTitle">Garage:</span><span class="infoBoxValue"> {{garage}}</span><br>
+				<span class="infoBoxTitle">Type:</span><span class="infoBoxValue"> {{type}}</span><br>
+				<span class="infoBoxTitle">Longitude:</span><span class="infoBoxValue"> {{longitude}}</span><br>
+				<span class="infoBoxTitle">Latitude:</span><span class="infoBoxValue"> {{latitude}}</span><br>
 			</div>
 			<div class="col-lg-3 col-sm-2"></div>
 		</div>
 
 		<div id="priceValue"class="row center-block text-center">
-			$10,300,000
+			{{price}}
 		</div>
-
-
-		{% block content %}
-		{% endblock %}
-
 	</div>
-
 </body>
 <script>
 	if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
