@@ -44,6 +44,7 @@ body {
     margin-top: 30px;
     /*background-color: red;*/
     font-size: 5em;
+    overflow-x: hidden;
     /*width: 100%;*/
 
 }
@@ -103,6 +104,6 @@ input[type="text"] {
         font-size: 1.5em;
     }
     #priceValue{
-        font-size: 3em;
+        font-size: 2.5em;
     }
 }
