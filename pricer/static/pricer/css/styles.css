@@ -40,7 +40,8 @@ input:focus {
 input[type="text"] {
     border: transparent;
     background-image: linear-gradient(197deg, #FFECF5 0%, #A5BBFF 100%);
-    box-shadow: 0 2px 50px 27px rgba(215, 215, 215, 0.50), inset 0 1px 53px 2px rgba(143, 143, 143, 0.50);
+    box-shadow: inset 0 1px 53px 2px rgba(143, 143, 143, 0.50);
+    border-radius: 4px;
 }
 
 #infoBox {
