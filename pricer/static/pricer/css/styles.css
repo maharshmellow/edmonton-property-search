@@ -26,6 +26,7 @@ body {
     background: #FFFFFF;
     box-shadow: -15px 46px 56px 15px rgba(0,0,0,0.50);
     border-radius: 4px;
+    overflow-x: hidden;
 }
 
 #maintitle{
@@ -42,8 +43,8 @@ body {
     font-weight: 100;
     margin-top: 30px;
     /*background-color: red;*/
-    font-size: 5vw;
-    width: 100%;
+    font-size: 5em;
+    /*width: 100%;*/
 
 }
 
@@ -90,7 +91,18 @@ input[type="text"] {
         box-shadow: -15px 46px 56px 15px rgba(0,0,0,0.50);
         border-radius: 4px;
     }
+    #addressBar{
+        font-family: "BG";
+        font-weight: 100;
+        margin-top: 30px;
+
+        font-size: 4em;
+        width: 100%;
+    }
     #infoBox{
         font-size: 1.5em;
+    }
+    #priceValue{
+        font-size: 4em;
     }
 }
