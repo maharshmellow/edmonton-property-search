@@ -76,7 +76,8 @@ input[type="text"] {
     font-family: "BG";
     font-weight: 700;
     font-size: 5em;
-    
+    padding-top: 5%;
+
 }
 
 @media only screen and (max-width: 500px) {
