@@ -1,35 +1,22 @@
-html,
-body {
-  position: relative;
-  height:100%;
-  background-image: linear-gradient(232deg, #FFECF5 0%, #A5BBFF 100%);
-  overflow-y: hidden;
+html, body {
+    position: relative;
+    height: 100%;
+    background-image: linear-gradient(232deg, #FFECF5 0%, #A5BBFF 100%);
+    overflow-y: hidden;
 }
 
-
-/*#backplate{
-    position: relative;
-    margin: auto;
-    width: 94vw;
-    height: 94vh;
-    top: 3vh;
-    background: #FFFFFF;
-    box-shadow: -15px 46px 56px 15px rgba(0,0,0,0.50);
-    border-radius: 4px;
-}*/
-
-#backplate{
+#backplate {
     margin-left: 50px;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-right: 50px;
     background: #FFFFFF;
-    box-shadow: -15px 46px 56px 15px rgba(0,0,0,0.50);
+    box-shadow: -15px 46px 56px 15px rgba(0, 0, 0, 0.50);
     border-radius: 4px;
     overflow-x: hidden;
 }
 
-#maintitle{
+#maintitle {
     font-family: "BG";
     font-weight: 700;
     font-size: 20px;
@@ -38,15 +25,12 @@ body {
     letter-spacing: -0.16px;
 }
 
-#addressBar{
+#addressBar {
     font-family: "BG";
     font-weight: 100;
     margin-top: 30px;
-    /*background-color: red;*/
     font-size: 5em;
     overflow-x: hidden;
-    /*width: 100%;*/
-
 }
 
 input:focus {
@@ -56,54 +40,53 @@ input:focus {
 input[type="text"] {
     border: transparent;
     background-image: linear-gradient(197deg, #FFECF5 0%, #A5BBFF 100%);
-    box-shadow: 0 2px 50px 27px rgba(215,215,215,0.50), inset 0 1px 53px 2px rgba(143,143,143,0.50);
-
+    box-shadow: 0 2px 50px 27px rgba(215, 215, 215, 0.50), inset 0 1px 53px 2px rgba(143, 143, 143, 0.50);
 }
 
-#infoBox{
-    /*padding-left: 10vw;*/
+#infoBox {
     font-size: 3em;
 }
-.infoBoxTitle{
+
+.infoBoxTitle {
     font-family: "BG";
     font-weight: 700;
     font-style: italic;
 }
-.infoBoxValue{
+
+.infoBoxValue {
     font-family: "BG";
     font-weight: 300;
-
 }
-#priceValue{
+
+#priceValue {
     font-family: "BG";
     font-weight: 700;
     font-size: 5em;
     font-style: italic;
     padding-top: 5%;
-
 }
 
 @media only screen and (max-width: 500px) {
-    #backplate{
+    #backplate {
         margin-left: 5px;
         margin-top: 5px;
         margin-bottom: 5px;
         margin-right: 5px;
         background: #FFFFFF;
-        box-shadow: -15px 46px 56px 15px rgba(0,0,0,0.50);
+        box-shadow: -15px 46px 56px 15px rgba(0, 0, 0, 0.50);
         border-radius: 4px;
     }
-    #addressBar{
+    #addressBar {
         font-family: "BG";
         font-weight: 100;
         margin-top: 30px;
         font-size: 2.8em;
         width: 100%;
     }
-    #infoBox{
+    #infoBox {
         font-size: 1.5em;
     }
-    #priceValue{
+    #priceValue {
         font-size: 2.5em;
     }
 }
