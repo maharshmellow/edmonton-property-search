@@ -3,13 +3,12 @@
 
 <head>
 	<title>Maharsh Patel</title>
-	<meta charset="utf-8" />
-	{% load static %}
-	<link rel="stylesheet" href="{% static 'pricer/css/bootstrap.min.css' %}" type = "text/css"/>
-	<link rel="stylesheet" href="{% static 'pricer/css/fonts.css' %}" type = "text/css"/>
-	<link rel="stylesheet" href="{% static 'pricer/css/styles.css' %}" type = "text/css"/>
+	<meta charset="utf-8" /> {% load static %}
+	<link rel="stylesheet" href="{% static 'pricer/css/bootstrap.min.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'pricer/css/fonts.css' %}" type="text/css" />
+	<link rel="stylesheet" href="{% static 'pricer/css/styles.css' %}" type="text/css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -46,20 +45,17 @@
 			<div class="col-lg-3 col-sm-2"></div>
 		</div>
 
-		<div id="priceValue"class="row center-block text-center">
+		<div id="priceValue" class="row center-block text-center">
 			{{price}}
 		</div>
 	</div>
 </body>
 <script>
-	if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-		$('#backplate').height($(window).height()-10);
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
+		$('#backplate').height($(window).height() - 10);
+	} else {
+		$('#backplate').height($(window).height() - 100);
 	}
-	else{
-		$('#backplate').height($(window).height()-100);
-	}
-
-
 </script>
 
 </html>
