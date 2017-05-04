@@ -97,13 +97,13 @@ input[type="text"] {
         font-family: "BG";
         font-weight: 100;
         margin-top: 30px;
-        font-size: 4em;
+        font-size: 3em;
         width: 100%;
     }
     #infoBox{
         font-size: 1.5em;
     }
     #priceValue{
-        font-size: 1.5em;
+        font-size: 2.5em;
     }
 }
