@@ -42,7 +42,6 @@ body {
     font-weight: 100;
     margin-top: 30px;
     /*background-color: red;*/
-    /*text-align: center;*/
     font-size: 5vw;
     width: 100%;
 
@@ -51,12 +50,19 @@ body {
 input:focus {
     outline: none;
 }
+
 input[type="text"] {
     border: transparent;
     background-image: linear-gradient(197deg, #FFECF5 0%, #A5BBFF 100%);
     box-shadow: 0 2px 50px 27px rgba(215,215,215,0.50), inset 0 1px 53px 2px rgba(143,143,143,0.50);
 
 }
+
+#infoBox{
+    /*padding-left: 10vw;*/
+    font-size: 3em;
+}
+
 
 @media only screen and (max-width: 500px) {
     #backplate{
