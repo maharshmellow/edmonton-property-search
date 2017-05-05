@@ -7,6 +7,7 @@ def index(request):
 
 def redirect(request):
     """This function is run when a user enters a new address into the app"""
+
     address = request.GET['address']
     conn = sqlite3.connect("properties.db")
     c = conn.cursor()
@@ -18,7 +19,7 @@ def redirect(request):
     # Render the page
     if len(rows) == 0:
         # invalid address
-        return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"Invalid Address","garage":"", "neighbourhood":"", "type":"", "latitude":"", "longitude":"","price":""})
+        return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"INVALID ADDRESS","garage":"", "neighbourhood":"", "type":"", "latitude":"", "longitude":"","price":""})
     else:
         # Convert garage value from Y, N to Yes, No
         if rows[0][2] == "Y":
