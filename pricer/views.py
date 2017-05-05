@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 import sqlite3
+import json
 
 def index(request):
     return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"11620 41 AVENUE SW","garage":"No", "neighbourhood":"ALLARD", "type":"Residential", "latitude":53.39839929, "longitude":-113.5248195, "price":"$8,468,500"})
@@ -31,3 +32,21 @@ def redirect(request):
             garage = "No"
 
         return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":rows[0][0], "neighbourhood":rows[0][1], "garage":garage, "type":rows[0][3], "latitude":rows[0][4], "longitude":rows[0][5],"price":rows[0][6]})
+
+def addresses(request):
+    """This function is used for the autocomplete"""
+    query = request.GET['query']
+
+    responseAddresses = []
+
+    # returns the 20 addresses that contain the query typed in
+    conn = sqlite3.connect("properties.db")
+    c = conn.cursor()
+    c.execute("SELECT address FROM properties WHERE address like :address limit 20;", {"address":"%"+query+"%"})
+    rows = c.fetchall()
+    conn.close()
+
+    for row in rows:
+        responseAddresses.append(row[0])
+
+    return HttpResponse(json.dumps({"suggestions":responseAddresses}))

@@ -53,31 +53,7 @@
 		</div>
 	</div>
 </body>
-<script>
-	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {
-		$('#backplate').height($(window).height() - 10);
-	} else {
-		$('#backplate').height($(window).height() - 100);
-	}
-</script>
-<script>
-	$("#addressBarField").keyup(function(e) {
-		if (e.keyCode == 13) {
-			window.location.href = '/redirect?address=' + document.getElementById("addressBarField").value;
-		}
-	});
-</script>
 
-<script>
-var addresses = [
-    { value: '1708 62 Street SW'},
-    { value: '33 Fairway Drive NW'}
-];
-$('#addressBarField').autocomplete({
-	lookup: addresses,
-	onSelect: function (suggestion) {
-		window.location.href = '/redirect?address=' + document.getElementById("addressBarField").value;
-    }
-});
-</script>
+<script src="{% static 'pricer/js/scripts.js' %}"></script>
+
 </html>
