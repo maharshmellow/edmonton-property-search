@@ -9,9 +9,12 @@ def redirect(request):
     """This function is run when a user enters a new address into the app"""
 
     address = request.GET['address']
+
+    if len(address) == 0:   # need to check this since the database contains some empty address lines
+        return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"INVALID ADDRESS","garage":"", "neighbourhood":"", "type":"", "latitude":"", "longitude":"","price":""})
+
     conn = sqlite3.connect("properties.db")
     c = conn.cursor()
-
     c.execute("SELECT address, neighbourhood, garage, type, latitude, longitude, value FROM properties WHERE address like :address;", {"address":address})
     rows = c.fetchall()
     conn.close()
