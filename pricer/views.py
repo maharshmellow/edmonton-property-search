@@ -15,15 +15,15 @@ def redirect(request):
     rows = c.fetchall()
     conn.close()
 
-    # Convert garage value from Y, N to Yes, No
-    if rows[0][2] == "Y":
-        garage = "Yes"
-    else:
-        garage = "No"
-
     # Render the page
     if len(rows) == 0:
         # invalid address
         return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"Invalid Address","garage":"", "neighbourhood":"", "type":"", "latitude":"", "longitude":"","price":""})
     else:
+        # Convert garage value from Y, N to Yes, No
+        if rows[0][2] == "Y":
+            garage = "Yes"
+        else:
+            garage = "No"
+
         return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":rows[0][0], "neighbourhood":rows[0][1], "garage":garage, "type":rows[0][3], "latitude":rows[0][4], "longitude":rows[0][5],"price":rows[0][6]})
