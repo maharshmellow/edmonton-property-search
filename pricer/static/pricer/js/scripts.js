@@ -11,15 +11,6 @@ $("#addressBarField").keyup(function(e) {
 	}
 });
 
-
-
-// var addresses = [
-//     { value: '1708 62 Street SW'},
-// {value: '33 FAIRWAY DRIVE NW'},
-// ];
-
-
-
 $('#addressBarField').autocomplete({
 	// lookup: addresses,
     serviceUrl: '/addresses',
