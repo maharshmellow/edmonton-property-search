@@ -42,7 +42,7 @@ def addresses(request):
     # returns the 20 addresses that contain the query typed in
     conn = sqlite3.connect("properties.db")
     c = conn.cursor()
-    c.execute("SELECT address FROM properties WHERE address like :address limit 20;", {"address":"%"+query+"%"})
+    c.execute("SELECT address FROM properties WHERE address like :address limit 7;", {"address":"%"+query+"%"})
     rows = c.fetchall()
     conn.close()
 
