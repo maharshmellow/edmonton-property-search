@@ -1,0 +1,126 @@
+html, body {
+    position: relative;
+    height: 100%;
+    background-image: linear-gradient(232deg, #FFECF5 0%, #A5BBFF 100%);
+    overflow-y: hidden;
+}
+
+#backplate {
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    background: #FFFFFF;
+    box-shadow: -15px 46px 56px 15px rgba(0, 0, 0, 0.50);
+    border-radius: 4px;
+    overflow-x: hidden;
+}
+
+#maintitle {
+    font-family: "BG";
+    font-weight: 700;
+    font-size: 20px;
+    padding-top: 40px;
+    color: #C3C3FE;
+    letter-spacing: -0.16px;
+}
+
+#addressBar {
+    font-family: "BG";
+    font-weight: 100;
+    margin-top: 30px;
+    font-size: 5em;
+    overflow-x: hidden;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="text"] {
+    border: transparent;
+    background-image: linear-gradient(197deg, #FFECF5 0%, #A5BBFF 100%);
+    box-shadow: inset 0 1px 53px 2px rgba(143, 143, 143, 0.50);
+    border-radius: 4px;
+}
+
+#infoBox {
+    font-size: 3em;
+    overflow-y: scroll;
+}
+
+.infoBoxTitle {
+    font-family: "BG";
+    font-weight: 700;
+    font-style: italic;
+}
+
+.infoBoxValue {
+    font-family: "BG";
+    font-weight: 300;
+}
+
+#priceValue {
+    font-family: "BG";
+    font-weight: 700;
+    font-size: 5em;
+    font-style: italic;
+    padding-top: 5%;
+}
+
+.autocomplete-suggestions {
+    background-image: linear-gradient(197deg, #FFECF5 0%, #A5BBFF 100%);
+    box-shadow: inset 0 1px 53px 2px rgba(143, 143, 143, 0.50);
+    overflow: auto;
+    margin-top: -2px;
+}
+
+.autocomplete-suggestion {
+    padding: 10px 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.autocomplete-selected {
+    background-image: linear-gradient(197deg, #FFECF5 20%, #A5BBFF 80%);
+}
+
+.autocomplete-suggestions strong {
+    font-weight: normal;
+    color: #FFECF5;
+}
+
+.autocomplete-group {
+    padding: 2px 5px;
+}
+
+.autocomplete-group strong {
+    display: block;
+    border-bottom: 1px solid #000;
+}
+
+@media only screen and (max-width: 500px) {
+    #backplate {
+        margin-left: 5px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+        background: #FFFFFF;
+        box-shadow: -15px 46px 56px 15px rgba(0, 0, 0, 0.50);
+        border-radius: 4px;
+    }
+    #addressBar {
+        font-family: "BG";
+        font-weight: 100;
+        margin-top: 30px;
+        font-size: 2.8em;
+        width: 100%;
+    }
+    #infoBox {
+        font-size: 1.5em;
+    }
+    #priceValue {
+        font-size: 2.5em;
+    }
+}
