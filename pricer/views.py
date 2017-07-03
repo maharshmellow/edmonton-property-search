@@ -4,12 +4,14 @@ import sqlite3
 import json
 
 def index(request):
-    return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"11620 41 AVENUE SW","garage":"No", "neighbourhood":"ALLARD", "type":"Residential", "latitude":53.39839929, "longitude":-113.5248195, "price":"$8,468,500"})
+    return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"11620 41 AVENUE SW","garage":"No", "neighbourhood":"ALLARD", "type":"RESIDENTIAL", "latitude":53.39839929, "longitude":-113.5248195, "price":"$8,468,500"})
 
 def redirect(request):
     """This function is run when a user enters a new address into the app"""
-
-    address = request.GET['address']
+    try:
+        address = request.GET['address']
+    except:
+        return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"INVALID ADDRESS","garage":"", "neighbourhood":"", "type":"", "latitude":"", "longitude":"","price":""})
 
     if len(address) == 0:   # need to check this since the database contains some empty address lines
         return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"INVALID ADDRESS","garage":"", "neighbourhood":"", "type":"", "latitude":"", "longitude":"","price":""})
