@@ -31,7 +31,7 @@ def redirect(request):
         else:
             garage = "No"
 
-        return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":rows[0][0], "neighbourhood":rows[0][1], "garage":garage, "type":rows[0][3], "latitude":rows[0][4], "longitude":rows[0][5],"price":rows[0][6]})
+        return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":rows[0][0], "neighbourhood":rows[0][1], "garage":garage.upper(), "type":rows[0][3].upper(), "latitude":rows[0][4], "longitude":rows[0][5],"price":rows[0][6]})
 
 def addresses(request):
     """This function is used for the autocomplete"""
@@ -42,11 +42,24 @@ def addresses(request):
     # returns the 20 addresses that contain the query typed in
     conn = sqlite3.connect("properties.db")
     c = conn.cursor()
-    c.execute("SELECT address FROM properties WHERE address like :address limit 7;", {"address":"%"+query+"%"})
+    
+    # see if we can get 7 items that start with the input value - if there are less, we can check to see if the the input value exists inbetween strings in the database
+    c.execute("SELECT address FROM properties WHERE address like :address limit 7;", {"address":query+"%"})
+    
     rows = c.fetchall()
+    remaining = 7 - len(rows)
+
+    if remaining > 0:
+        c.execute("SELECT address FROM properties WHERE address like :address limit :remaining;", {"address":"%"+query+"%", "remaining": remaining})
+        
+        for new_item in c.fetchall():
+            if new_item not in rows:
+                rows.append(new_item)
+
     conn.close()
 
     for row in rows:
         responseAddresses.append(row[0])
+        print(row)
 
     return HttpResponse(json.dumps({"suggestions":responseAddresses}))
