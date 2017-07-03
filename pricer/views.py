@@ -43,17 +43,18 @@ def addresses(request):
     conn = sqlite3.connect("properties.db")
     c = conn.cursor()
     
-    c.execute("SELECT address FROM properties WHERE address like :address limit 7;", {"address":"%"+query+"%"})
+    # see if we can get 7 items that start with the input value - if there are less, we can check to see if the the input value exists inbetween strings in the database
+    c.execute("SELECT address FROM properties WHERE address like :address limit 7;", {"address":query+"%"})
     
     rows = c.fetchall()
-    # remaining = 7 - len(rows)
+    remaining = 7 - len(rows)
 
-    # if remaining > 0:
-    #     c.execute("SELECT address FROM properties WHERE address like :address limit :remaining;", {"address":"%"+query+"%", "remaining": remaining})
+    if remaining > 0:
+        c.execute("SELECT address FROM properties WHERE address like :address limit :remaining;", {"address":"%"+query+"%", "remaining": remaining})
         
-    #     for new_item in c.fetchall():
-    #         if new_item not in rows:
-    #             rows.append(new_item)
+        for new_item in c.fetchall():
+            if new_item not in rows:
+                rows.append(new_item)
 
     conn.close()
 
