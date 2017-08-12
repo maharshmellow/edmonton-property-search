@@ -1,6 +1,6 @@
 # Edmonton Property Prices
 Gives property information based on a given address
-## Demo: https://edmonton-property-search.maharsh.net/
+## Demo: https://properties.maharsh.net 
 
 ```diff
 - Note: since the app is running on a limited VPS with many other apps, it may be slow
