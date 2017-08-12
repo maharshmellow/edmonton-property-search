@@ -1,4 +1,4 @@
-###[Demo](https://properties.maharsh.net)
+### [Demo](https://properties.maharsh.net)
 
 ---
 
