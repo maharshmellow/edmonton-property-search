@@ -4,7 +4,7 @@ import sqlite3
 import json
 
 def index(request):
-    return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"11620 41 AVENUE SW","garage":"No", "neighbourhood":"ALLARD", "type":"RESIDENTIAL", "latitude":53.39839929, "longitude":-113.5248195, "price":"$8,468,500"})
+    return render(request, "pricer/header.html", {"addressBarValue":"Enter Address", "address":"11620 41 AVENUE SW","garage":"NO", "neighbourhood":"ALLARD", "type":"RESIDENTIAL", "latitude":53.39839929, "longitude":-113.5248195, "price":"$8,468,500"})
 
 def redirect(request):
     """This function is run when a user enters a new address into the app"""

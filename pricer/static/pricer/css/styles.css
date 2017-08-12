@@ -30,7 +30,7 @@ html, body {
     font-weight: 100;
     margin-top: 30px;
     font-size: 5em;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 input:focus {
@@ -46,7 +46,7 @@ input[type="text"] {
 
 #infoBox {
     font-size: 3em;
-    overflow-y: scroll;
+    overflow-y: hidden;
 }
 
 .infoBoxTitle {
