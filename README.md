@@ -1,6 +1,5 @@
-# Edmonton Property Search
+# Edmonton Property Search - No longer maintained
 Shows the up-to-date property prices (and other info) as provided by the City of Edmonton. <br><br>
-<a href="https://properties.maharsh.net"><img src="https://cdn.rawgit.com/maharshmellow/550f99fcf7934352e83bb29d85176a04/raw/97e9b2d71bb78961605685ab372c134150c6bd40/demo.svg" width="150px;"/></a>
 
 ###  Screenshots
 ##### Main Screen
